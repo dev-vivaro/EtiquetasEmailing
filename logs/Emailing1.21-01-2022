@@ -1,0 +1,40 @@
+Fri Jan 21 2022 16:00:33 GMT-0600 (hora estándar central) | Buscando registros pendientes.
+Fri Jan 21 2022 16:00:34 GMT-0600 (hora estándar central) | Enviando 1 registros.
+Fri Jan 21 2022 16:00:34 GMT-0600 (hora estándar central) | undefined | {}
+Fri Jan 21 2022 16:00:34 GMT-0600 (hora estándar central) | [{"status":"fulfilled","value":0}]
+Fri Jan 21 2022 16:04:00 GMT-0600 (hora estándar central) | Buscando registros pendientes.
+Fri Jan 21 2022 16:04:00 GMT-0600 (hora estándar central) | Enviando 1 registros.
+Fri Jan 21 2022 16:04:00 GMT-0600 (hora estándar central) | undefined | {}
+Fri Jan 21 2022 16:04:00 GMT-0600 (hora estándar central) | [{"status":"fulfilled","value":0}]
+Fri Jan 21 2022 16:07:06 GMT-0600 (hora estándar central) | Buscando registros pendientes.
+Fri Jan 21 2022 16:07:06 GMT-0600 (hora estándar central) | Enviando 1 registros.
+Fri Jan 21 2022 16:07:06 GMT-0600 (hora estándar central) | 26 | 0
+Fri Jan 21 2022 16:07:06 GMT-0600 (hora estándar central) | [{"status":"fulfilled"}]
+Fri Jan 21 2022 16:08:45 GMT-0600 (hora estándar central) | Buscando registros pendientes.
+Fri Jan 21 2022 16:08:46 GMT-0600 (hora estándar central) | Enviando 1 registros.
+Fri Jan 21 2022 16:08:46 GMT-0600 (hora estándar central) | 26 | 0
+Fri Jan 21 2022 16:08:46 GMT-0600 (hora estándar central) | [{"status":"fulfilled"}]
+Fri Jan 21 2022 16:09:44 GMT-0600 (hora estándar central) | Buscando registros pendientes.
+Fri Jan 21 2022 16:09:44 GMT-0600 (hora estándar central) | Enviando 1 registros.
+Fri Jan 21 2022 16:09:45 GMT-0600 (hora estándar central) | 26 | 0
+Fri Jan 21 2022 16:11:03 GMT-0600 (hora estándar central) | Buscando registros pendientes.
+Fri Jan 21 2022 16:11:04 GMT-0600 (hora estándar central) | Enviando 1 registros.
+Fri Jan 21 2022 16:11:04 GMT-0600 (hora estándar central) | 26 | {}
+Fri Jan 21 2022 16:20:45 GMT-0600 (hora estándar central) | Buscando registros pendientes.
+Fri Jan 21 2022 16:20:45 GMT-0600 (hora estándar central) | Enviando 1 registros.
+Fri Jan 21 2022 16:20:46 GMT-0600 (hora estándar central) | 26 | {}
+Fri Jan 21 2022 16:21:16 GMT-0600 (hora estándar central) | Buscando registros pendientes.
+Fri Jan 21 2022 16:21:17 GMT-0600 (hora estándar central) | Enviando 1 registros.
+Fri Jan 21 2022 16:21:17 GMT-0600 (hora estándar central) | 26 | {"accepted":["jcgarza@marcatel.net"],"rejected":[],"envelopeTime":135,"messageTime":159,"messageSize":382,"response":"250 2.0.0 Ok: queued as C2ACA1F817E","envelope":{"from":"cacarreon@marcatel.net","to":["jcgarza@marcatel.net"]},"messageId":"<88436613-6627-3114-9dee-c807ec96b322@marcatel.net>"}
+Fri Jan 21 2022 16:29:50 GMT-0600 (hora estándar central) | Buscando registros pendientes.
+Fri Jan 21 2022 16:29:51 GMT-0600 (hora estándar central) | Enviando 1 registros.
+Fri Jan 21 2022 16:29:51 GMT-0600 (hora estándar central) | 26 | {"code":"EENVELOPE","command":"API"}
+Fri Jan 21 2022 16:30:31 GMT-0600 (hora estándar central) | Buscando registros pendientes.
+Fri Jan 21 2022 16:30:31 GMT-0600 (hora estándar central) | Enviando 1 registros.
+Fri Jan 21 2022 16:30:31 GMT-0600 (hora estándar central) | 26 | {"accepted":["a@marcatel.net"],"rejected":[],"envelopeTime":121,"messageTime":123,"messageSize":376,"response":"250 2.0.0 Ok: queued as 08BBA1F817E","envelope":{"from":"cacarreon@marcatel.net","to":["a@marcatel.net"]},"messageId":"<b8be6c32-e955-b724-c5be-035f18d21a49@marcatel.net>"}
+Fri Jan 21 2022 16:36:38 GMT-0600 (hora estándar central) | Buscando registros pendientes.
+Fri Jan 21 2022 16:36:39 GMT-0600 (hora estándar central) | Enviando 1 registros.
+Fri Jan 21 2022 16:36:39 GMT-0600 (hora estándar central) | 26 | {"accepted":["a@marcatel.net"],"rejected":[],"envelopeTime":132,"messageTime":153,"messageSize":376,"response":"250 2.0.0 Ok: queued as C483F1F817E","envelope":{"from":"cacarreon@marcatel.net","to":["a@marcatel.net"]},"messageId":"<db655ae0-0fd1-10dc-b3d1-90b03707f777@marcatel.net>"}
+Fri Jan 21 2022 16:36:39 GMT-0600 (hora estándar central) | Actualizado | undefined | 1
+Fri Jan 21 2022 16:37:19 GMT-0600 (hora estándar central) | Buscando registros pendientes.
+Fri Jan 21 2022 16:37:20 GMT-0600 (hora estándar central) | No hay registros pendientes | 0

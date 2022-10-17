@@ -1,0 +1,15 @@
+{
+  "name": "etiquetas-emailing",
+  "version": "1.0.0",
+  "description": "",
+  "main": "emailing.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "nodemailer": "^6.5.0",
+    "mssql": "^4.2.2"
+  }
+}

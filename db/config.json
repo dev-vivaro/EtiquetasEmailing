@@ -1,0 +1,44 @@
+{
+  "prod": {
+    "user": "sysdbo",
+    "password": "QxaAvTeG",
+    "server": "mtelsqlsms2",
+    "database": "Emailing",
+    "connectionTimeout": 300000,
+    "requestTimeout": 300000,
+    "options": {
+      "encrypt": false
+    },
+    "pool": {
+      "idleTimeoutMillis": 300000
+    }
+  },
+  "qa": {
+    "user": "sysdbo",
+    "password": "QxaAvTeG",
+    "server": "MTELQASQLSMS2",
+    "database": "Emailing",
+    "connectionTimeout": 300000,
+    "requestTimeout": 300000,
+    "options": {
+      "encrypt": false
+    },
+    "pool": {
+      "idleTimeoutMillis": 300000
+    }
+  },
+  "dev": {
+    "user": "sysdbo",
+    "password": "desarrollo",
+    "server": "MTELTESTSQL2",
+    "database": "Emailing",
+    "connectionTimeout": 300000,
+    "requestTimeout": 300000,
+    "options": {
+      "encrypt": false
+    },
+    "pool": {
+      "idleTimeoutMillis": 30000
+    }
+  }
+}
