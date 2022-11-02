@@ -38,6 +38,10 @@ const envio = async () => {
 					host: reg.HostSMTP,
 					port: reg.PuertoSMTP,
 					secure: registros.SeguridadActiva == 1 ? true : false,
+					auth: {
+						user: reg.UsuarioSMTP,
+						pass: reg.PasswordSMTP
+					}
 				} : {
 					service: reg.ServiceName,
 					secure: registros.SeguridadActiva == 1 ? true : false,
