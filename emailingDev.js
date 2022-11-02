@@ -127,7 +127,7 @@ function log(info) {
 	let hr = new Date()
 	let archivoLog = getDate()
 	fs.appendFileSync(
-		`./logs/Emailing${etiqueta}.${archivoLog}`,
+		`./logs/EmailingDev${etiqueta}.${archivoLog}`,
 		`${hr} | ${info}\r\n`
 	)
 	return

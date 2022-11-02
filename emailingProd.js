@@ -127,14 +127,14 @@ function log(info) {
 	let hr = new Date()
 	let archivoLog = getDate()
 	fs.appendFileSync(
-		`./logs/Emailing${etiqueta}.${archivoLog}`,
+		`./logs/EmailingProd${etiqueta}.${archivoLog}`,
 		`${hr} | ${info}\r\n`
 	)
 	return
 }
 
 (async ()=>{
-	pool = await db.getConnDev()
+	pool = await db.getConnProd()
 	envio()
 	return 
 })()
