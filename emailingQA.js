@@ -13,6 +13,7 @@ let pool
 
 const envio = async () => {
 	log(`Buscando registros pendientes.`)
+	log(`Buscando registros pendientes.`)
 	let registros
 	
 	registros = await pool
