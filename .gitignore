@@ -1,3 +1,5 @@
 /logs/logdb.*
-/logs/Emailing1.*
+/logs/EmailingProd1.*
+/logs/EmailingQA1.*
+/logs/EmailingDev1.*
 node_modules

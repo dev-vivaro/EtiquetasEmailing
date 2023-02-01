@@ -1,4 +1,0 @@
-Fri Feb 25 2022 16:51:07 GMT-0600 (hora estándar central) | Buscando registros pendientes.
-Fri Feb 25 2022 16:51:07 GMT-0600 (hora estándar central) | Enviando 1 registros.
-Fri Feb 25 2022 16:51:08 GMT-0600 (hora estándar central) | 26 | {"accepted":["jcgarza@marcatel.net"],"rejected":[],"envelopeTime":31,"messageTime":76,"messageSize":321,"response":"250 2.0.0 Ok: queued as 7D8D11F83FC","envelope":{"from":"cacarreon@marcatel.net","to":["jcgarza@marcatel.net"]},"messageId":"<a6969be7-d72b-90df-d860-96bbab832ba2@marcatel.net>"}
-Fri Feb 25 2022 16:51:08 GMT-0600 (hora estándar central) | Actualizado | 26 | 1
