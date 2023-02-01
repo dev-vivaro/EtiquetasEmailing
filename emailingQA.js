@@ -13,7 +13,6 @@ let pool
 
 const envio = async () => {
 	log(`Buscando registros pendientes.`)
-	log(`Buscando registros pendientes.`)
 	let registros
 	
 	registros = await pool
@@ -42,6 +41,8 @@ const envio = async () => {
 					auth: {
 						user: reg.UsuarioSMTP,
 						pass: reg.PasswordSMTP
+					}, tls: {
+						rejectUnauthorized: false
 					}
 				} : {
 					service: reg.ServiceName,
@@ -50,6 +51,8 @@ const envio = async () => {
 					auth: {
 						user: reg.UsuarioSMTP,
 						pass: reg.PasswordSMTP
+					}, tls: {
+						rejectUnauthorized: false
 					}
 				}
 				let remitente = {
@@ -62,8 +65,8 @@ const envio = async () => {
 				}
 				// console.log(config,remitente,mensaje)
 				let resultado = await email(config, remitente, mensaje)
-				// console.log(resultado)
-				log(`${reg.IdEnvioEmailing} | ${JSON.stringify(resultado)}`)
+				// console.log('try', resultado)
+				log(`${reg.IdEnvioEmailing} | ${resultado?.reason || JSON.stringify(resultado)}`)
 				
 				let actualizado = await pool
 					.request()
@@ -76,7 +79,7 @@ const envio = async () => {
 				
 				return 1
 			} catch (err) {
-				//console.log(err)
+				// console.log('catch', err)
 				let actualizado = await pool
 					.request()
 					.input('IdUsuario', sql.Int, reg.IdUsuario)
@@ -84,7 +87,7 @@ const envio = async () => {
 					.input('Resultado', sql.Int, 3)
 					.input('Descripcion', sql.VarChar(200), err.response)
 					.execute('usp_ActualizaMsgEtiqueta') //SP actualiza resultado
-				log(`Actualizado | ${reg.IdEnvioEmailing} | ${JSON.stringify(err)}`)
+				log(`Actualizado | ${reg.IdEnvioEmailing} | ${JSON.stringify(err) || err}`)
 				
 				return 0
 			}
@@ -104,11 +107,20 @@ const envio = async () => {
 
 async function email(config, remitente, mensaje) {
 	let transporter = nodemailer.createTransport(config, remitente)
-	// log(transporter)
-	let response = await transporter.sendMail(mensaje)
-	// console.log(JSON.stringify(response))
-	transporter.close()
-	return response
+	log(`PETICION | CONFIG | ${JSON.stringify(config)}`)
+	log(`PETICION | REMITENTE | ${JSON.stringify(remitente)}`)
+	log(`PETICION | MENSAJE | ${JSON.stringify(mensaje)}`)
+	
+	try {
+		let response = await transporter.sendMail(mensaje)
+		// console.log('RESPONSE Email() ', response)
+		transporter.close()
+		return response
+	} catch (err) {
+		// console.log('ERROR Email() ', err)
+		return err		
+	}
+	
 }
 
 const getDate = () => {
