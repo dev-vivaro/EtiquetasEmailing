@@ -9,7 +9,8 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "nodemailer": "^6.5.0",
-    "mssql": "^4.2.2"
+    "himalaya": "^1.1.0",
+    "mssql": "^4.2.2",
+    "nodemailer": "^6.5.0"
   }
 }
