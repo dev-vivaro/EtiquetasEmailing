@@ -26,6 +26,7 @@ const envio = async () => {
   if (registros.recordset.length > 0) {
     log(`Enviando ${registros.recordset.length} registros.`)
     const promises = registros.recordset.map(async (reg) => {
+      reg.estructurahtml = `<html> ${reg.estructurahtml} </html>`
       if (reg.ColumnaJson) {
         let columnasJson = JSON.parse(reg.ColumnaJson)
         let columnas = Object.keys(columnasJson)
@@ -47,29 +48,29 @@ const envio = async () => {
         let config =
           reg.ServiceName == 'Custom'
             ? {
-                host: reg.HostSMTP,
-                port: reg.PuertoSMTP,
-                secure: registros.SeguridadActiva == 1 ? true : false,
-                auth: {
-                  user: reg.UsuarioSMTP,
-                  pass: reg.PasswordSMTP,
-                },
-                tls: {
-                  rejectUnauthorized: false,
-                },
-              }
+              host: reg.HostSMTP,
+              port: reg.PuertoSMTP,
+              secure: reg.SeguridadActiva == 1 ? true : false,
+              auth: {
+                user: reg.UsuarioSMTP,
+                pass: reg.PasswordSMTP,
+              },
+              tls: {
+                rejectUnauthorized: false,
+              },
+            }
             : {
-                service: reg.ServiceName,
-                secure: registros.SeguridadActiva == 1 ? true : false,
-                port: 465,
-                auth: {
-                  user: reg.UsuarioSMTP,
-                  pass: reg.PasswordSMTP,
-                },
-                tls: {
-                  rejectUnauthorized: false,
-                },
-              }
+              service: reg.ServiceName,
+              secure: reg.SeguridadActiva == 1 ? true : false,
+              port: 465,
+              auth: {
+                user: reg.UsuarioSMTP,
+                pass: reg.PasswordSMTP,
+              },
+              tls: {
+                rejectUnauthorized: false,
+              },
+            }
         let remitente = {
           from: `${reg.NombreRemitente} <${reg.EmailRemitente}>`,
         }
@@ -81,10 +82,9 @@ const envio = async () => {
         }
         // console.log(config,remitente,mensaje)
         let resultado = await email(config, remitente, mensaje)
-        // console.log('try', resultado)
+        console.log('try', resultado)
         log(
-          `${reg.IdEnvioEmailing} | ${
-            resultado?.reason || JSON.stringify(resultado)
+          `${reg.IdEnvioEmailing} | ${resultado?.reason || JSON.stringify(resultado)
           }`
         )
 
@@ -99,7 +99,7 @@ const envio = async () => {
 
         return 1
       } catch (err) {
-        // console.log('catch', err)
+        console.log('catch', err)
         let actualizado = await pool
           .request()
           .input('IdUsuario', sql.Int, reg.IdUsuario)
@@ -172,7 +172,9 @@ function log(info) {
 }
 
 function imgToAttachment(html) {
+  //console.log(html)
   const json = parse(html)
+  //console.log(json)
   let attachments = []
   json[0].children.forEach((tag, index) => {
     if (json[0].children[index].tagName === 'img') {
@@ -196,7 +198,7 @@ function imgToAttachment(html) {
   return { newHtml, attachments }
 }
 
-;(async () => {
+; (async () => {
   pool = await db.getConnProd()
   envio()
   return
