@@ -124,7 +124,7 @@ const envio = async () => {
       )}`
     )
   }
-  setTimeout(envio, 5000) //espera 5 segundo para ejecutarse nuevamente
+  setTimeout(envio, 30000) //espera 5 segundo para ejecutarse nuevamente
 }
 
 async function email(config, remitente, mensaje) {
